@@ -1,10 +1,8 @@
 using System.Text;
 
-using utauPlugin;
-
 namespace utauPlugin.Test
 {
-    public class Tests
+    public class errorTest
     {
         UtauPlugin utauPlugin;
         [SetUp]
@@ -23,7 +21,7 @@ namespace utauPlugin.Test
             List<float> pbw = note.GetPbw();
             List<float> pby = note.GetPby();
             List<string> pbm = note.GetPbm();
-            Assert.True(4 == pbw.Count);
+            Assert.AreEqual(4, pbw.Count);
 
             float ave = pbw[0] / 2;
             float nextY = pby[0];
@@ -42,7 +40,7 @@ namespace utauPlugin.Test
             //Assert.IsTrue(pby[2] == -10.7f);
             //Assert.IsTrue(pby[3] == 0f);
             //Assert.IsTrue(4 == pby.Count);
-            Assert.True(6 == pbw.Count);
+            Assert.AreEqual(6, pbw.Count);
             utauPlugin.FilePath = "outputData\\Mode2AddPitch.tmp";
             Directory.CreateDirectory("outputData");
             utauPlugin.Output();

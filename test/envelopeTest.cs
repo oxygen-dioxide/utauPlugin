@@ -9,7 +9,7 @@ namespace envelopeTest
     public class envelopeTest
     {
         //
-        //ƒGƒ“ƒxƒ[ƒvŠÖŒW‚ÌƒeƒXƒg
+        //ã‚¨ãƒ³ãƒ™ãƒ­ãƒ¼ãƒ—é–¢ä¿‚ã®ãƒ†ã‚¹ãƒˆ
         //
 
         [TestMethod]

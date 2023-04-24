@@ -8,7 +8,7 @@ namespace mode2PitchTest
     public class mode2Pitchtest
     {
         //
-        //mode2ƒsƒbƒ`ŠÖŒW‚ÌƒeƒXƒg
+        //mode2ãƒ”ãƒƒãƒé–¢ä¿‚ã®ãƒ†ã‚¹ãƒˆ
         //
 
         [TestMethod]
@@ -188,7 +188,7 @@ namespace mode2PitchTest
             Assert.IsTrue(2 == mode2Pitch.GetPbm().Count);
         }
         
-        //2019.10.06ƒAƒvƒf‚Å–v
+        //2019.10.06ã‚¢ãƒ—ãƒ‡ã§æ²¡
         //[TestMethod]
         //public void ChangeGetPbyTest()
         //{

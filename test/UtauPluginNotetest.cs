@@ -59,11 +59,11 @@ namespace UtauPluginNoteTest
         [TestMethod]
         public void SetLyric()
         {
-            note.InitLyric("Ç¢");
-            Assert.IsTrue(note.GetLyric() == "Ç¢");
+            note.InitLyric("„ÅÑ");
+            Assert.IsTrue(note.GetLyric() == "„ÅÑ");
             Assert.IsFalse(note.LyricIsChanged());
-            note.SetLyric("Ç†");
-            Assert.IsTrue(note.GetLyric() == "Ç†");
+            note.SetLyric("„ÅÇ");
+            Assert.IsTrue(note.GetLyric() == "„ÅÇ");
             Assert.IsTrue(note.LyricIsChanged());
         }
         [TestMethod]
@@ -209,11 +209,11 @@ namespace UtauPluginNoteTest
         [TestMethod]
         public void SetAtFileName()
         {
-            note.InitAtFileName("Ç¢");
-            Assert.IsTrue(note.GetAtFileName() == "Ç¢");
+            note.InitAtFileName("„ÅÑ");
+            Assert.IsTrue(note.GetAtFileName() == "„ÅÑ");
             Assert.IsFalse(note.AtFileNameIsChanged());
-            note.SetAtFileName("Ç†");
-            Assert.IsTrue(note.GetAtFileName() == "Ç†");
+            note.SetAtFileName("„ÅÇ");
+            Assert.IsTrue(note.GetAtFileName() == "„ÅÇ");
             Assert.IsTrue(note.AtFileNameIsChanged());
         }
 
@@ -221,11 +221,11 @@ namespace UtauPluginNoteTest
         [TestMethod]
         public void SetAtAlias()
         {
-            note.InitAtAlias("Ç¢");
-            Assert.IsTrue(note.GetAtAlias() == "Ç¢");
+            note.InitAtAlias("„ÅÑ");
+            Assert.IsTrue(note.GetAtAlias() == "„ÅÑ");
             Assert.IsFalse(note.AtAliasIsChanged());
-            note.SetAtAlias("Ç†");
-            Assert.IsTrue(note.GetAtAlias() == "Ç†");
+            note.SetAtAlias("„ÅÇ");
+            Assert.IsTrue(note.GetAtAlias() == "„ÅÇ");
             Assert.IsTrue(note.AtAliasIsChanged());
         }
 
@@ -424,11 +424,11 @@ namespace UtauPluginNoteTest
         [TestMethod]
         public void SetFlags()
         {
-            note.InitFlags("Ç¢");
-            Assert.IsTrue(note.GetFlags() == "Ç¢");
+            note.InitFlags("„ÅÑ");
+            Assert.IsTrue(note.GetFlags() == "„ÅÑ");
             Assert.IsFalse(note.FlagsIsChanged());
-            note.SetFlags("Ç†");
-            Assert.IsTrue(note.GetFlags() == "Ç†");
+            note.SetFlags("„ÅÇ");
+            Assert.IsTrue(note.GetFlags() == "„ÅÇ");
             Assert.IsTrue(note.FlagsIsChanged());
         }
 
@@ -570,11 +570,11 @@ namespace UtauPluginNoteTest
         [TestMethod]
         public void SetLabel()
         {
-            note.InitLabel("Ç¢");
-            Assert.IsTrue(note.GetLabel() == "Ç¢");
+            note.InitLabel("„ÅÑ");
+            Assert.IsTrue(note.GetLabel() == "„ÅÑ");
             Assert.IsFalse(note.LabelIsChanged());
-            note.SetLabel("Ç†");
-            Assert.IsTrue(note.GetLabel() == "Ç†");
+            note.SetLabel("„ÅÇ");
+            Assert.IsTrue(note.GetLabel() == "„ÅÇ");
             Assert.IsTrue(note.LabelIsChanged());
         }
 
@@ -605,11 +605,11 @@ namespace UtauPluginNoteTest
         [TestMethod]
         public void SetRegion()
         {
-            note.InitRegion("Ç¢");
-            Assert.IsTrue(note.GetRegion() == "Ç¢");
+            note.InitRegion("„ÅÑ");
+            Assert.IsTrue(note.GetRegion() == "„ÅÑ");
             Assert.IsFalse(note.RegionIsChanged());
-            note.SetRegion("Ç†");
-            Assert.IsTrue(note.GetRegion() == "Ç†");
+            note.SetRegion("„ÅÇ");
+            Assert.IsTrue(note.GetRegion() == "„ÅÇ");
             Assert.IsTrue(note.RegionIsChanged());
         }
 
@@ -617,11 +617,11 @@ namespace UtauPluginNoteTest
         [TestMethod]
         public void SetRegionEnd()
         {
-            note.InitRegionEnd("Ç¢");
-            Assert.IsTrue(note.GetRegionEnd() == "Ç¢");
+            note.InitRegionEnd("„ÅÑ");
+            Assert.IsTrue(note.GetRegionEnd() == "„ÅÑ");
             Assert.IsFalse(note.RegionEndIsChanged());
-            note.SetRegionEnd("Ç†");
-            Assert.IsTrue(note.GetRegionEnd() == "Ç†");
+            note.SetRegionEnd("„ÅÇ");
+            Assert.IsTrue(note.GetRegionEnd() == "„ÅÇ");
             Assert.IsTrue(note.RegionEndIsChanged());
         }
         [TestMethod]
@@ -700,11 +700,11 @@ namespace UtauPluginNoteTest
         public void NoInitSetAtFileName()
         {
             Assert.IsFalse(note.AtFileNameIsChanged());
-            note.SetAtFileName("Ç¢");
-            Assert.IsTrue(note.GetAtFileName() == "Ç¢");
+            note.SetAtFileName("„ÅÑ");
+            Assert.IsTrue(note.GetAtFileName() == "„ÅÑ");
             Assert.IsTrue(note.AtFileNameIsChanged());
-            note.SetAtFileName("Ç†");
-            Assert.IsTrue(note.GetAtFileName() == "Ç†");
+            note.SetAtFileName("„ÅÇ");
+            Assert.IsTrue(note.GetAtFileName() == "„ÅÇ");
             Assert.IsTrue(note.AtFileNameIsChanged());
         }
 
@@ -713,11 +713,11 @@ namespace UtauPluginNoteTest
         public void NoInitSetAtAlias()
         {
             Assert.IsFalse(note.AtAliasIsChanged());
-            note.SetAtAlias("Ç¢");
-            Assert.IsTrue(note.GetAtAlias() == "Ç¢");
+            note.SetAtAlias("„ÅÑ");
+            Assert.IsTrue(note.GetAtAlias() == "„ÅÑ");
             Assert.IsTrue(note.AtAliasIsChanged());
-            note.SetAtAlias("Ç†");
-            Assert.IsTrue(note.GetAtAlias() == "Ç†");
+            note.SetAtAlias("„ÅÇ");
+            Assert.IsTrue(note.GetAtAlias() == "„ÅÇ");
             Assert.IsTrue(note.AtAliasIsChanged());
         }
 
@@ -935,11 +935,11 @@ namespace UtauPluginNoteTest
         public void NoInitSetFlags()
         {
             Assert.IsFalse(note.FlagsIsChanged());
-            note.SetFlags("Ç¢");
-            Assert.IsTrue(note.GetFlags() == "Ç¢");
+            note.SetFlags("„ÅÑ");
+            Assert.IsTrue(note.GetFlags() == "„ÅÑ");
             Assert.IsTrue(note.FlagsIsChanged());
-            note.SetFlags("Ç†");
-            Assert.IsTrue(note.GetFlags() == "Ç†");
+            note.SetFlags("„ÅÇ");
+            Assert.IsTrue(note.GetFlags() == "„ÅÇ");
             Assert.IsTrue(note.FlagsIsChanged());
         }
 
@@ -1082,11 +1082,11 @@ namespace UtauPluginNoteTest
         public void NoInitSetLabel()
         {
             Assert.IsFalse(note.LabelIsChanged());
-            note.SetLabel("Ç¢");
-            Assert.IsTrue(note.GetLabel() == "Ç¢");
+            note.SetLabel("„ÅÑ");
+            Assert.IsTrue(note.GetLabel() == "„ÅÑ");
             Assert.IsTrue(note.LabelIsChanged());
-            note.SetLabel("Ç†");
-            Assert.IsTrue(note.GetLabel() == "Ç†");
+            note.SetLabel("„ÅÇ");
+            Assert.IsTrue(note.GetLabel() == "„ÅÇ");
             Assert.IsTrue(note.LabelIsChanged());
         }
 
@@ -1120,11 +1120,11 @@ namespace UtauPluginNoteTest
         public void NoInitSetRegion()
         {
             Assert.IsFalse(note.RegionIsChanged());
-            note.SetRegion("Ç¢");
-            Assert.IsTrue(note.GetRegion() == "Ç¢");
+            note.SetRegion("„ÅÑ");
+            Assert.IsTrue(note.GetRegion() == "„ÅÑ");
             Assert.IsTrue(note.RegionIsChanged());
-            note.SetRegion("Ç†");
-            Assert.IsTrue(note.GetRegion() == "Ç†");
+            note.SetRegion("„ÅÇ");
+            Assert.IsTrue(note.GetRegion() == "„ÅÇ");
             Assert.IsTrue(note.RegionIsChanged());
         }
 
@@ -1133,15 +1133,15 @@ namespace UtauPluginNoteTest
         public void NoInitSetRegionEnd()
         {
             Assert.IsFalse(note.RegionEndIsChanged());
-            note.SetRegionEnd("Ç¢");
-            Assert.IsTrue(note.GetRegionEnd() == "Ç¢");
+            note.SetRegionEnd("„ÅÑ");
+            Assert.IsTrue(note.GetRegionEnd() == "„ÅÑ");
             Assert.IsTrue(note.RegionEndIsChanged());
-            note.SetRegionEnd("Ç†");
-            Assert.IsTrue(note.GetRegionEnd() == "Ç†");
+            note.SetRegionEnd("„ÅÇ");
+            Assert.IsTrue(note.GetRegionEnd() == "„ÅÇ");
             Assert.IsTrue(note.RegionEndIsChanged());
         }
 
-        //2019.10.06ÉAÉvÉfÇ…ÇÊÇËñv
+        //2019.10.06„Ç¢„Éó„Éá„Å´„Çà„ÇäÊ≤°
         //[TestMethod]
         //public void ChangeGetPbyTest()
         //{

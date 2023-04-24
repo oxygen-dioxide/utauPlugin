@@ -7,7 +7,7 @@ namespace noteNumTest
     public class noteNumTest
     {
         //
-        //NoteNum�֌W�̃e�X�g
+        //NoteNum関係のテスト
         //
 
         [TestMethod]

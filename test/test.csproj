@@ -4,9 +4,6 @@
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="inputData\nobody.tmp" />
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="outputData\" />
     <Folder Include="src\" />
   </ItemGroup>
