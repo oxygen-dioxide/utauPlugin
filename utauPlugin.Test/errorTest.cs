@@ -2,7 +2,7 @@ using System.Text;
 
 namespace utauPlugin.Test
 {
-    public class errorTest
+    public class ErrorTest
     {
         UtauPlugin utauPlugin;
         [SetUp]

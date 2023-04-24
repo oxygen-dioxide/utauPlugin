@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text;
 
 namespace utauPlugin.Test
 {
-    public class outputUstTest
+    public class OutputUstTest
     {
         UtauPlugin utauPlugin;
         

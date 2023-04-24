@@ -9,9 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "test", "test\test.csproj", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UtauVoiceBank", "UtauVoiceBank\UtauVoiceBank.csproj", "{FFAEC90E-A656-44BB-B9E2-962829F223AD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UtauVoiceBankTests", "UtauVoiceBankTests\UtauVoiceBankTests.csproj", "{C744FBF1-EDE0-447B-A08D-88653A7BA6E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UtauVoiceBankTests", "UtauVoiceBankTests\UtauVoiceBankTests.csproj", "{C744FBF1-EDE0-447B-A08D-88653A7BA6E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddOverlap", "AddOverlap\AddOverlap.csproj", "{CBDF6A5D-316D-4FCC-9909-5766E81C2ADF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AddOverlap", "AddOverlap\AddOverlap.csproj", "{CBDF6A5D-316D-4FCC-9909-5766E81C2ADF}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InsertNote", "InsertNote\InsertNote.csproj", "{06DB6092-9C90-4560-9827-8CE5FE19EE99}"
 EndProject
@@ -21,7 +21,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Wave", "Wave\Wave.csproj", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WaveTests", "WaveTests\WaveTests.csproj", "{07D3C607-2CAE-470C-83C1-D5CCA25ECAC0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "utauPlugin.Test", "utauPlugin.Test\utauPlugin.Test.csproj", "{925E840F-B8F5-4D29-ABE1-E75A023558DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "utauPlugin.Test", "utauPlugin.Test\utauPlugin.Test.csproj", "{925E840F-B8F5-4D29-ABE1-E75A023558DC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
