@@ -23,19 +23,18 @@ namespace utauPlugin
 
         public void Input()
         {
-            //GetUstData();
-            //AnalyzeHeader();
-            //note = new List<Note>();
-            //AnalyzeNotes();
+            Console.WriteLine(Encoding.GetEncoding(CultureInfo.CurrentCulture.TextInfo.ANSICodePage).WebName);
+            GetUstData();
+            AnalyzeHeader();
+            note = new List<Note>();
+            AnalyzeNotes();
+        }
+
+        public void InputSafe()
+        {
             try
             {
-                Console.WriteLine(Encoding.GetEncoding(CultureInfo.CurrentCulture.TextInfo.ANSICodePage).WebName);
-                //System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
-                //ustData.AddRange(File.ReadAllLines(FilePath, Encoding.GetEncoding("Shift_JIS")));
-                GetUstData();
-                AnalyzeHeader();
-                note = new List<Note>();
-                AnalyzeNotes();
+                Input();
             }
             catch (Exception ex)
             {
@@ -204,12 +203,16 @@ namespace utauPlugin
         }
         public void Output()
         {
+            writeData = new List<String>();
+            OutputHelper();
+            Directory.CreateDirectory(Path.GetDirectoryName(FilePath));
+            File.WriteAllLines(FilePath, writeData, Encoding.GetEncoding("Shift_JIS"));
+        }
+
+        public void OutputSafe(){
             try
             {
-                writeData = new List<String>();
-                OutputHelper();
-                Directory.CreateDirectory(Path.GetDirectoryName(FilePath));
-                File.WriteAllLines(FilePath, writeData, Encoding.GetEncoding("Shift_JIS"));
+                Output();
             }
             catch (Exception ex)
             {
