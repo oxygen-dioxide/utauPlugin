@@ -1,30 +1,29 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using utauPlugin;
-using System.Collections.Generic;
+using System.Text;
 
-namespace errorTest.cs
+using utauPlugin;
+
+namespace utauPlugin.Test
 {
-    [TestClass]
-    public class errorTest
+    public class Tests
     {
         UtauPlugin utauPlugin;
-
-        [TestInitialize()]
-        public void testInitialize()
+        [SetUp]
+        public void Setup()
         {
+            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
             utauPlugin = new UtauPlugin();
-
         }
-        [TestMethod]
+
+        [Test]
         public void testMode2AddPitch()
         {
-            utauPlugin.FilePath ="..\\..\\..\\test\\inputData\\test119.tmp";
+            utauPlugin.FilePath = "inputData\\test119.tmp";
             utauPlugin.Input();
             Note note = utauPlugin.note[2];
             List<float> pbw = note.GetPbw();
             List<float> pby = note.GetPby();
             List<string> pbm = note.GetPbm();
-            Assert.IsTrue(4 == pbw.Count);
+            Assert.True(4 == pbw.Count);
 
             float ave = pbw[0] / 2;
             float nextY = pby[0];
@@ -43,8 +42,9 @@ namespace errorTest.cs
             //Assert.IsTrue(pby[2] == -10.7f);
             //Assert.IsTrue(pby[3] == 0f);
             //Assert.IsTrue(4 == pby.Count);
-            Assert.IsTrue(6 == pbw.Count);
-            utauPlugin.FilePath ="..\\..\\..\\test\\outputData\\Mode2AddPitch.tmp";
+            Assert.True(6 == pbw.Count);
+            utauPlugin.FilePath = "outputData\\Mode2AddPitch.tmp";
+            Directory.CreateDirectory("outputData");
             utauPlugin.Output();
         }
     }
