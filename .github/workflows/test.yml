@@ -23,5 +23,11 @@ jobs:
     - name: restore
       run: dotnet restore utauPlugin.Test -r ${{ matrix.os.arch }}
 
+    - name: build
+      run: dotnet build utauPlugin.Test
+    
+    - name: tree
+      run: tree
+
     - name: unit test
       run: dotnet test utauPlugin.Test
