@@ -208,6 +208,7 @@ namespace utauPlugin
             {
                 writeData = new List<String>();
                 OutputHelper();
+                Directory.CreateDirectory(Path.GetDirectoryName(FilePath));
                 File.WriteAllLines(FilePath, writeData, Encoding.GetEncoding("Shift_JIS"));
             }
             catch (Exception ex)
