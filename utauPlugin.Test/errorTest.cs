@@ -42,7 +42,6 @@ namespace utauPlugin.Test
             //Assert.IsTrue(4 == pby.Count);
             Assert.AreEqual(6, pbw.Count);
             utauPlugin.FilePath = "outputData\\Mode2AddPitch.tmp";
-            Directory.CreateDirectory("outputData");
             utauPlugin.Output();
         }
     }
