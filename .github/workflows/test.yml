@@ -27,7 +27,8 @@ jobs:
       run: dotnet build utauPlugin.Test
     
     - name: tree
-      run: tree
+      run: ls utauPlugin.Test/bin/Debug/net6.0 |
+        ls utauPlugin.Test/bin/Debug/net6.0/inputData
 
     - name: unit test
       run: dotnet test utauPlugin.Test
