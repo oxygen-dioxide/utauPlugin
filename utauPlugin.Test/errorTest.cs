@@ -15,7 +15,7 @@ namespace utauPlugin.Test
         [Test]
         public void testMode2AddPitch()
         {
-            utauPlugin.FilePath = "inputData\\test119.tmp";
+            utauPlugin.FilePath = "inputData/test119.tmp";
             utauPlugin.Input();
             Note note = utauPlugin.note[2];
             List<float> pbw = note.GetPbw();
@@ -41,7 +41,7 @@ namespace utauPlugin.Test
             //Assert.IsTrue(pby[3] == 0f);
             //Assert.IsTrue(4 == pby.Count);
             Assert.AreEqual(6, pbw.Count);
-            utauPlugin.FilePath = "outputData\\Mode2AddPitch.tmp";
+            utauPlugin.FilePath = "outputData/Mode2AddPitch.tmp";
             utauPlugin.Output();
         }
     }

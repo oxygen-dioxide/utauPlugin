@@ -11,7 +11,7 @@ namespace utauPlugin.Test
         {
             Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
             utauPlugin = new UtauPlugin();
-            utauPlugin.FilePath = "inputData\\test119.tmp";
+            utauPlugin.FilePath = "inputData/test119.tmp";
             utauPlugin.Input();
         }
 
@@ -39,7 +39,7 @@ namespace utauPlugin.Test
         public void TestUstVersionV120()
         {
             utauPlugin = new UtauPlugin();
-            utauPlugin.FilePath = "inputData\\test120.tmp";
+            utauPlugin.FilePath = "inputData/test120.tmp";
             utauPlugin.Input();
             Assert.AreEqual("1.20", utauPlugin.Version);
         }

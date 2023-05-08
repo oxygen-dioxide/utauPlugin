@@ -16,42 +16,42 @@ namespace utauPlugin.Test
         [Test]
         public void testv119()
         {
-            utauPlugin.FilePath = "inputData\\test119.tmp";
+            utauPlugin.FilePath = "inputData/test119.tmp";
             utauPlugin.Input();
-            utauPlugin.FilePath = "outputData\\out119.tmp";
+            utauPlugin.FilePath = "outputData/out119.tmp";
             utauPlugin.Output();
         }
 
         [Test]
         public void testv119Insert()
         {
-            utauPlugin.FilePath = "inputData\\test119.tmp";
+            utauPlugin.FilePath = "inputData/test119.tmp";
             utauPlugin.Input();
             for (int i = 0; i < utauPlugin.note.Count; i++)
             {
                 utauPlugin.note[i].SetNum("INSERT");
             }
-            utauPlugin.FilePath = "outputData\\out119Insert.tmp";
+            utauPlugin.FilePath = "outputData/out119Insert.tmp";
             utauPlugin.Output();
         }
 
         [Test]
         public void testv119_SetLength()
         {
-            utauPlugin.FilePath = "inputData\\test119.tmp";
+            utauPlugin.FilePath = "inputData/test119.tmp";
             utauPlugin.Input();
             utauPlugin.note[2].SetLength(120);
-            utauPlugin.FilePath = "outputData\\out119_Length.tmp";
+            utauPlugin.FilePath = "outputData/out119_Length.tmp";
             utauPlugin.Output();
         }
 
         [Test]
         public void testv119_SetDirect()
         {
-            utauPlugin.FilePath = "inputData\\test119.tmp";
+            utauPlugin.FilePath = "inputData/test119.tmp";
             utauPlugin.Input();
             utauPlugin.note[2].SetDirect(false);
-            utauPlugin.FilePath = "outputData\\out119_Direct.tmp";
+            utauPlugin.FilePath = "outputData/out119_Direct.tmp";
             utauPlugin.Output();
         }
         /*
