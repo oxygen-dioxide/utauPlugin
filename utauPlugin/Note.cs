@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using UtauVoiceBank;
+using utauPlugin.UtauVoiceBank;
 
 namespace utauPlugin
 {

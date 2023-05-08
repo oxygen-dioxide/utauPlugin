@@ -2,7 +2,7 @@
 using System.IO;
 using System.Text;
 
-namespace Wave
+namespace utauPlugin
 {
     public class Wave
     {

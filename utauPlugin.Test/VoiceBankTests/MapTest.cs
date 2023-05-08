@@ -1,6 +1,7 @@
 ﻿using System.Text;
+using utauPlugin.UtauVoiceBank;
 
-namespace utauPlugin.Test.WaveTests
+namespace utauPlugin.Test.VoiceBankTests
 {
     public class MapTest
     {
