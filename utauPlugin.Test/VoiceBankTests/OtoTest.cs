@@ -1,16 +1,20 @@
-﻿using UtauVoiceBank;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System.Text;
 
-namespace UtauVoiceBank.Tests
+namespace utauPlugin.Test.WaveTests
 {
-    [TestClass()]
-    public class OtoTests
+    public class OtoTest
     {
-        [TestMethod()]
+        [SetUp]
+        public void SetUp()
+        {
+            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+        }
+
+        [Test]
         public void GetInverseBlankTest()
         {
             Oto oto = new Oto();
-            oto.DirPath = "..\\..\\testWav";
+            oto.DirPath = "VoiceBankData/testWav";
             oto.FileName = "test1.wav";
             oto.Alias = "あ";
             oto.Offset = 100;
@@ -24,11 +28,11 @@ namespace UtauVoiceBank.Tests
 
         }
 
-        [TestMethod()]
+        [Test]
         public void GetWavLengthTest()
         {
             Oto oto = new Oto();
-            oto.DirPath = "..\\..\\testWav";
+            oto.DirPath = "VoiceBankData/testWav";
             oto.FileName = "test1.wav";
             oto.Alias = "あ";
             oto.Offset = 100;
@@ -39,10 +43,10 @@ namespace UtauVoiceBank.Tests
             Assert.IsTrue(oto.GetWavLength() == 5944);
         }
 
-        [TestMethod()]
+        [Test]
         public void InputOtoTest()
         {
-            VoiceBank vb = new VoiceBank("..\\..\\testDir");
+            VoiceBank vb = new VoiceBank("VoiceBankData/testDir");
             vb.InputOto();
             Assert.IsTrue(vb.oto["あ"].DirPath == "");
             Assert.IsTrue(vb.oto["あ"].Alias == "あ");
@@ -56,10 +60,10 @@ namespace UtauVoiceBank.Tests
 
         }
 
-        [TestMethod()]
+        [Test]
         public void InputOtoAllTest()
         {
-            VoiceBank vb = new VoiceBank("..\\..\\testDir");
+            VoiceBank vb = new VoiceBank("VoiceBankData/testDir");
             vb.InputOtoAll();
             Assert.IsTrue(vb.oto["あ"].DirPath == "");
             Assert.IsTrue(vb.oto["あ"].Alias == "あ");
@@ -78,10 +82,10 @@ namespace UtauVoiceBank.Tests
             Assert.IsFalse(vb.oto.ContainsKey("お"));
 
         }
-        [TestMethod()]
+        [Test]
         public void InputOtoAllTestRecursive()
         {
-            VoiceBank vb = new VoiceBank("..\\..\\testDir");
+            VoiceBank vb = new VoiceBank("VoiceBankData/testDir");
             vb.InputOtoAll(true);
             Assert.IsTrue(vb.oto["あ"].DirPath == "");
             Assert.IsTrue(vb.oto["あ"].Alias == "あ");
@@ -101,10 +105,10 @@ namespace UtauVoiceBank.Tests
             Assert.IsTrue(vb.oto["お"].Alias == "お");
 
         }
-        [TestMethod()]
+        [Test]
         public void InputOtoAllTestNoRootOto()
         {
-            VoiceBank vb = new VoiceBank("..\\..\\testDirNoRootOto");
+            VoiceBank vb = new VoiceBank("VoiceBankData/testDirNoRootOto");
             vb.InputOtoAll();
             Assert.IsTrue(vb.oto["う"].DirPath == "あ");
             Assert.IsTrue(vb.oto["う"].Alias == "う");
@@ -114,10 +118,10 @@ namespace UtauVoiceBank.Tests
             Assert.IsFalse(vb.oto.ContainsKey("お"));
 
         }
-        [TestMethod()]
+        [Test]
         public void InputOtoAllTestRecursiveNoRootOto()
         {
-            VoiceBank vb = new VoiceBank("..\\..\\testDirNoRootOto");
+            VoiceBank vb = new VoiceBank("VoiceBankData/testDirNoRootOto");
             vb.InputOtoAll(true);
             Assert.IsTrue(vb.oto["う"].DirPath == "あ");
             Assert.IsTrue(vb.oto["う"].Alias == "う");

@@ -1,14 +1,11 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace Wave.Tests
+﻿namespace utauPlugin.Test.WaveTests
 {
-    [TestClass()]
     public class WaveTests
     {
-        [TestMethod()]
+        [Test]
         public void ReadTest()
         {
-            Wave wav = new Wave("..\\..\\testWav\\test1.wav");
+            Wave wav = new Wave("WaveData/test1.wav");
             wav.Read();
             Assert.IsTrue(wav.GetHeader().Channel==1);
             Assert.IsTrue(wav.GetHeader().SampleRate == 44100);

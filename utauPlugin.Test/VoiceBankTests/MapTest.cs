@@ -1,29 +1,28 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using UtauVoiceBank;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text;
 
-namespace UtauVoiceBank.Tests
+namespace utauPlugin.Test.WaveTests
 {
-    [TestClass()]
-    public class MapTests
+    public class MapTest
     {
-        [TestMethod()]
+        [SetUp]
+        public void SetUp()
+        {
+            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+        }
+
+        [Test]
         public void InputPrefixMapTest()
         {
-            VoiceBank vb = new VoiceBank("..\\..\\testDir");
+            VoiceBank vb = new VoiceBank("VoiceBankData/testDir");
             vb.InputPrefixMap();
             Assert.IsTrue(vb.prefixMap["B3"].Su == "B3");
             Assert.IsTrue(vb.prefixMap["A#3"].Su == "");
         }
 
-        [TestMethod()]
+        [Test]
         public void InputPrefixMapsAllTest()
         {
-            VoiceBank vb = new VoiceBank("..\\..\\testDir");
+            VoiceBank vb = new VoiceBank("VoiceBankData/testDir");
             vb.InputPrefixMapsAll();
             Assert.IsTrue(vb.prefixMaps[""]["B3"].Su == "B3");
             Assert.IsTrue(vb.prefixMaps[""]["A#3"].Su == "");
