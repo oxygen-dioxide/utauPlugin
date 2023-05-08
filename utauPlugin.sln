@@ -5,8 +5,6 @@ VisualStudioVersion = 17.6.33617.297
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "utauPlugin", "utauPlugin\utauPlugin.csproj", "{C08197D8-8323-4E6E-AAB4-F0B57CC304BD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "test", "test\test.csproj", "{53DEE000-3758-4DCF-9AD9-25DEBD8D7D32}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AddOverlap", "AddOverlap\AddOverlap.csproj", "{CBDF6A5D-316D-4FCC-9909-5766E81C2ADF}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InsertNote", "InsertNote\InsertNote.csproj", "{06DB6092-9C90-4560-9827-8CE5FE19EE99}"
@@ -25,10 +23,6 @@ Global
 		{C08197D8-8323-4E6E-AAB4-F0B57CC304BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C08197D8-8323-4E6E-AAB4-F0B57CC304BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C08197D8-8323-4E6E-AAB4-F0B57CC304BD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{53DEE000-3758-4DCF-9AD9-25DEBD8D7D32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{53DEE000-3758-4DCF-9AD9-25DEBD8D7D32}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{53DEE000-3758-4DCF-9AD9-25DEBD8D7D32}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{53DEE000-3758-4DCF-9AD9-25DEBD8D7D32}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CBDF6A5D-316D-4FCC-9909-5766E81C2ADF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CBDF6A5D-316D-4FCC-9909-5766E81C2ADF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CBDF6A5D-316D-4FCC-9909-5766E81C2ADF}.Release|Any CPU.ActiveCfg = Release|Any CPU

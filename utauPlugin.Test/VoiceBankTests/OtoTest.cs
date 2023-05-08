@@ -77,8 +77,8 @@ namespace utauPlugin.Test.VoiceBankTests
             Assert.IsTrue(vb.oto["い"].Alias == "い");
             Assert.IsTrue(vb.oto["う"].DirPath == "あ");
             Assert.IsTrue(vb.oto["う"].Alias == "う");
-            Assert.IsTrue(vb.oto["あ\\え"].DirPath == "あ");
-            Assert.IsTrue(vb.oto["あ\\え"].Alias == "あ\\え");
+            Assert.IsTrue(vb.oto["あ/え"].DirPath == "あ");
+            Assert.IsTrue(vb.oto["あ/え"].Alias == "あ/え");
             Assert.IsFalse(vb.oto.ContainsKey("え"));
             Assert.IsFalse(vb.oto.ContainsKey("お"));
 
@@ -99,10 +99,10 @@ namespace utauPlugin.Test.VoiceBankTests
             Assert.IsTrue(vb.oto["い"].Alias == "い");
             Assert.IsTrue(vb.oto["う"].DirPath == "あ");
             Assert.IsTrue(vb.oto["う"].Alias == "う");
-            Assert.IsTrue(vb.oto["あ\\え"].DirPath == "あ");
-            Assert.IsTrue(vb.oto["あ\\え"].Alias == "あ\\え");
+            Assert.IsTrue(vb.oto["あ/え"].DirPath == "あ");
+            Assert.IsTrue(vb.oto["あ/え"].Alias == "あ/え");
             Assert.IsFalse(vb.oto.ContainsKey("え"));
-            Assert.IsTrue(vb.oto["お"].DirPath == "あ\\あ");
+            Assert.IsTrue(vb.oto["お"].DirPath == "あ/あ");
             Assert.IsTrue(vb.oto["お"].Alias == "お");
 
         }
@@ -113,8 +113,8 @@ namespace utauPlugin.Test.VoiceBankTests
             vb.InputOtoAll();
             Assert.IsTrue(vb.oto["う"].DirPath == "あ");
             Assert.IsTrue(vb.oto["う"].Alias == "う");
-            Assert.IsTrue(vb.oto["あ\\え"].DirPath == "あ");
-            Assert.IsTrue(vb.oto["あ\\え"].Alias == "あ\\え");
+            Assert.IsTrue(vb.oto["あ/え"].DirPath == "あ");
+            Assert.IsTrue(vb.oto["あ/え"].Alias == "あ/え");
             Assert.IsFalse(vb.oto.ContainsKey("え"));
             Assert.IsFalse(vb.oto.ContainsKey("お"));
 
@@ -126,10 +126,10 @@ namespace utauPlugin.Test.VoiceBankTests
             vb.InputOtoAll(true);
             Assert.IsTrue(vb.oto["う"].DirPath == "あ");
             Assert.IsTrue(vb.oto["う"].Alias == "う");
-            Assert.IsTrue(vb.oto["あ\\え"].DirPath == "あ");
-            Assert.IsTrue(vb.oto["あ\\え"].Alias == "あ\\え");
+            Assert.IsTrue(vb.oto["あ/え"].DirPath == "あ");
+            Assert.IsTrue(vb.oto["あ/え"].Alias == "あ/え");
             Assert.IsFalse(vb.oto.ContainsKey("え"));
-            Assert.IsTrue(vb.oto["お"].DirPath == "あ\\あ");
+            Assert.IsTrue(vb.oto["お"].DirPath == "あ/あ");
             Assert.IsTrue(vb.oto["お"].Alias == "お");
 
         }

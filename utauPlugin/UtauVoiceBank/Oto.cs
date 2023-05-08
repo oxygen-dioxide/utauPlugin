@@ -73,7 +73,17 @@ namespace utauPlugin.UtauVoiceBank
                 string[] tmp = x.Split('=');
                 string[] splitData = tmp[1].Split(',');
                 //ファイル名でエイリアス追加
-                AddOto(oto, Path.Combine(subDirPath,tmp[0].Replace(".wav","")), subDirPath, tmp[0], splitData);
+                string otoKey;
+                if(subDirPath == "")
+                {
+                    otoKey = tmp[0].Replace(".wav", "");
+                }
+                else
+                {
+                    subDirPath = subDirPath.Replace('\\', '/');
+                    otoKey = subDirPath + "/" + tmp[0].Replace(".wav", "");
+                }
+                AddOto(oto, otoKey, subDirPath, tmp[0], splitData);
                 //エイリアスがあればエイリアス通り追加
                 if (splitData[0] != "")
                 {
