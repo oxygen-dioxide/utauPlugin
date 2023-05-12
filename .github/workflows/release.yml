@@ -1,0 +1,50 @@
+on:
+    workflow_dispatch:
+      inputs:
+        version:
+          description: 'Version Number'
+          default: '0.0.0.0'
+          required: true
+          type: string
+        create-release:
+          type: boolean
+          description: "Create Release"
+  
+  jobs:
+    release:
+      runs-on: ${{ matrix.os.runs-on }}
+  
+      strategy:
+        matrix:
+          os: 
+            - runs-on: windows-latest
+              arch: win-x64
+            - runs-on: macos-latest
+              arch: osx-x64
+  
+      steps:
+      - uses: actions/checkout@v1
+  
+      - name: build
+        run: dotnet build OpenUtau -c Release
+
+      - name: pack
+        run: dotnet pack utauPlugin -c Release /property:Version=${{ inputs.version }}
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v1.0.0
+        with:
+          name: utauPlugin.${{ inputs.version }}.nupkg
+          path: utauPlugin\bin\Release\utauPlugin.${{ inputs.version }}.nupkg
+       
+      - name: Create release
+        if: ${{ inputs.create-release }}
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ inputs.version }}
+          files: |
+            OpenUtau-${{ matrix.os.arch }}-${{ inputs.version }}.zip
+      
+      - name: upload to nuget.org
+        if: ${{ inputs.create-release }}
+        run: dotnet nuget push utauPlugin/bin/Release/utauPlugin.${{ inputs.version }}.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json
