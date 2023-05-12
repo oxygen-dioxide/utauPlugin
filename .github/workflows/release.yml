@@ -17,8 +17,8 @@ jobs:
       strategy:
         matrix:
           os: 
-            - runs-on: windows-latest
-              arch: win-x64
+            - runs-on: ubuntu-latest
+              arch: linux-x64
   
       steps:
       - uses: actions/checkout@v1
@@ -33,7 +33,7 @@ jobs:
         uses: actions/upload-artifact@v1.0.0
         with:
           name: utauPlugin.${{ inputs.version }}.nupkg
-          path: utauPlugin\bin\Release\utauPlugin.${{ inputs.version }}.nupkg
+          path: utauPlugin/bin/Release/utauPlugin.${{ inputs.version }}.nupkg
        
       - name: Create release
         if: ${{ inputs.create-release }}
@@ -41,7 +41,7 @@ jobs:
         with:
           tag_name: ${{ inputs.version }}
           files: |
-            OpenUtau-${{ matrix.os.arch }}-${{ inputs.version }}.zip
+            utauPlugin/bin/Release/utauPlugin.${{ inputs.version }}.nupkg
       
       - name: upload to nuget.org
         if: ${{ inputs.create-release }}
