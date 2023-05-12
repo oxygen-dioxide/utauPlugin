@@ -19,8 +19,6 @@ jobs:
           os: 
             - runs-on: windows-latest
               arch: win-x64
-            - runs-on: macos-latest
-              arch: osx-x64
   
       steps:
       - uses: actions/checkout@v1
