@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using utauPlugin.UtauVoiceBank;
 
 namespace utauPlugin
 {
     public partial class Note
     {
+        /*
         public void InitAlias()
         {
             alias = new AliasData();
@@ -55,6 +55,7 @@ namespace utauPlugin
 
             public string Alias { get => alias; set => alias = value; }
         }
+        */
 
     }
 }

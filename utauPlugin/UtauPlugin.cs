@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Globalization;
-using utauPlugin.UtauVoiceBank;
 
 namespace utauPlugin
 {
@@ -15,7 +14,7 @@ namespace utauPlugin
         private List<String> writeData;
         private int i;
         private float nowTempo;
-        public VoiceBank vb;
+        //public VoiceBank.VoiceBank vb;
 
 
         public UtauPlugin() { InitEntries(); }
@@ -296,15 +295,17 @@ namespace utauPlugin
             return null;
         }
 
+        /*
         public void InputVoiceBank()
         {
-            vb = new VoiceBank(VoiceDir);
+            vb = new VoiceBank.VoiceBank(VoiceDir);
             vb.InputPrefixMap();
             vb.InputOtoAll();
-        }
+        }*/
 
         //先行発声やオーバーラップ値が与えられていないノートに原音設定値を設定する．
         //書き出しには影響しない
+        /*
         public void ApplyOto()
         {
 
@@ -312,15 +313,15 @@ namespace utauPlugin
             {
                 note[i].ApplyOto(vb.prefixMap, vb.oto);
             }
-        }
+        }*/
         //@パラメータが存在しないノートの原音設定値から初期化する．
+        /*
         public void InitAtParam()
         {
             for (int i = 0; i < note.Count; i++)
             {
                 note[i].InitAtParam(vb.prefixMap, vb.oto);
             }
-        }
-
+        }*/
     }
 }

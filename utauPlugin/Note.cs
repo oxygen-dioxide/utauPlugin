@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using utauPlugin.UtauVoiceBank;
 
 namespace utauPlugin
 {
@@ -36,7 +35,7 @@ namespace utauPlugin
         private Entry<string> region;
         private Entry<string> regionEnd;
         private Dictionary<string,Entry<Object>> originalEntries;
-        private AliasData alias;
+        //private AliasData alias;
         private Note prev;
         private Note next;
 
@@ -53,7 +52,7 @@ namespace utauPlugin
             noteNum = new NoteNum(DEFAULT_NOTENUM);
             pre = new Pre(DEFAULT_PRE);
         }
-        
+        /*
         public void ApplyOto(Dictionary<string,MapValue> map, Dictionary<string, Oto> oto)
         {
             if(!HasAlias() && HasAtAlias())
@@ -112,7 +111,8 @@ namespace utauPlugin
                 InitAtFileName("");
             }
         }
-
+        */
+        /*
         public void InitAtParam(Dictionary<string, MapValue> map, Dictionary<string, Oto> oto)
         {
             ApplyOto(map,oto);
@@ -128,8 +128,8 @@ namespace utauPlugin
             {
                 AutoFitAtParam();
             }
-        }
-
+        }*/
+        /*
         private void AutoFitAtParam()
         {
             float prevMsLength;
@@ -166,7 +166,7 @@ namespace utauPlugin
             InitAtPre(tmpPre);
             InitAtOve(tmpOve);
             InitAtStp(tmpStp);
-        }
+        }*/
 
         public int GetMsLength()
         {
