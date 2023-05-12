@@ -3,14 +3,14 @@ on:
       inputs:
         version:
           description: 'Version Number'
-          default: '0.0.0.0'
+          default: '0.0.0'
           required: true
           type: string
         create-release:
           type: boolean
           description: "Create Release"
   
-  jobs:
+jobs:
     release:
       runs-on: ${{ matrix.os.runs-on }}
   
@@ -47,4 +47,4 @@ on:
       
       - name: upload to nuget.org
         if: ${{ inputs.create-release }}
-        run: dotnet nuget push utauPlugin/bin/Release/utauPlugin.${{ inputs.version }}.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json
+        run: 
