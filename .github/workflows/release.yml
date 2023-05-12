@@ -45,4 +45,4 @@ jobs:
       
       - name: upload to nuget.org
         if: ${{ inputs.create-release }}
-        run: 
+        run: dotnet nuget push utauPlugin/bin/Release/utauPlugin.${{ inputs.version }}.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json
