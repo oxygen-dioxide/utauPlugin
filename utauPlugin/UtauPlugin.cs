@@ -15,14 +15,24 @@ namespace utauPlugin
         private int i;
         private float nowTempo;
         //public VoiceBank.VoiceBank vb;
-
+        public Encoding encoding = Encoding.GetEncoding("Shift_JIS");
 
         public UtauPlugin() { InitEntries(); }
+
         public UtauPlugin(string filePath) : base(filePath) { InitEntries(); }
+
+        public UtauPlugin(Encoding encoding){
+            InitEntries();
+            encoding = encoding;
+        }
+
+        public UtauPlugin(string filePath, Encoding encoding) : base(filePath){
+            InitEntries();
+            encoding = encoding;
+        }
 
         public void Input()
         {
-            Console.WriteLine(Encoding.GetEncoding(CultureInfo.CurrentCulture.TextInfo.ANSICodePage).WebName);
             GetUstData();
             AnalyzeHeader();
             note = new List<Note>();
@@ -48,7 +58,7 @@ namespace utauPlugin
             string line;
             long pos = 0;
             ustData = new List<string>();
-            StreamReader file = new StreamReader(FilePath, Encoding.GetEncoding(Encoding.GetEncoding(CultureInfo.CurrentCulture.TextInfo.ANSICodePage).WebName));
+            StreamReader file = new StreamReader(FilePath, encoding);
 
             while ((line = file.ReadLine()) != null)
             {
@@ -205,7 +215,7 @@ namespace utauPlugin
             writeData = new List<String>();
             OutputHelper();
             Directory.CreateDirectory(Path.GetDirectoryName(FilePath));
-            File.WriteAllLines(FilePath, writeData, Encoding.GetEncoding("Shift_JIS"));
+            File.WriteAllLines(FilePath, writeData, encoding);
         }
 
         public void OutputSafe(){

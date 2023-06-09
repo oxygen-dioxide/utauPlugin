@@ -20,6 +20,7 @@ This version is for testing only.</Description>
     <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="6.0.0" />
     <PackageReference Include="System.Text.Encoding.CodePages" Version="7.0.0" />
     <PackageReference Include="YamlDotNet" Version="13.1.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="sample\AddOverlap\AddOverlap\AddOverlap.cs" />
